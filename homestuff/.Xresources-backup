@@ -1,0 +1,74 @@
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! Xlock settings -------------------------------------------------------------
+
+XLock.antialias:      true
+XLock.fontset:        -*-droid sans-medium-r-*-*-24-0-0-0-p-0-iso8859-1
+XLock.font:           -*-droid sans-medium-r-*-*-24-0-0-0-p-0-iso8859-1
+XLock.planfontset:    -*-droid sans-medium-r-*-*-14-0-0-0-p-0-iso8859-1
+XLock.planfont:       -*-droid sans-medium-r-*-*-14-0-0-0-p-0-iso8859-1
+XLock.messagefont:    -*-droid sans-medium-r-*-*-18-0-0-0-p-0-iso8859-1
+
+! XTerm ----------------------------------------------------------------------
+
+XTerm*veryBoldColors: 6
+XTerm*termName:           xterm-color
+XTerm*geometry:           80x25
+XTerm*faceName:           terminus:style=Bold:pixelsize=16:antialias=true
+XTerm*font:               -*-terminus-bold-*-*-*-16-*-*-*-*-*-iso8859-1
+XTerm*dynamicColors:      true
+XTerm*utf8:               2
+XTerm*eightBitInput:      true
+XTerm*saveLines:          24000
+XTerm*scrollKey:          true
+XTerm*scrollTtyOutput:    false
+XTerm*scrollBar:          false
+XTerm*rightScrollBar:     false
+XTerm*jumpScroll:         true
+XTerm*multiScroll:        true
+XTerm*toolBar:            true
+XTerm*selectToClipboard:  false
+
+XTerm*foreground:   rgb:17/17/17
+XTerm*background:   rgb:e4/e6/e6
+
+! XTerm*color0: rgb:00/00/00
+! XTerm*color1: rgb:a8/00/00
+! XTerm*color2: rgb:00/a8/00
+! XTerm*color3: rgb:a8/54/00
+! XTerm*color4: rgb:00/00/a8
+! XTerm*color5: rgb:a8/00/a8
+! XTerm*color6: rgb:00/a8/a8
+! XTerm*color7: rgb:a8/a8/a8
+! XTerm*color8: rgb:54/54/54
+! XTerm*color9: rgb:fc/54/54
+! XTerm*color10: rgb:54/fc/54
+! XTerm*color11: rgb:fc/fc/54
+! XTerm*color12: rgb:54/54/fc
+! XTerm*color13: rgb:fc/54/fc
+! XTerm*color14: rgb:54/fc/fc
+! XTerm*color15: rgb:fc/fc/fc
+
+! urxvt
+
+URxvt*termName:          rxvt-256color
+URxvt*saveLines:         65535
+URxvt*internalBorder:    0
+URxvt*externalBorder:    0
+URxvt.font:              xft:Terminus:pixelsize=16:style=Bold
+URxvt*skipBuiltinGlyphs: true
+URxvt*scrollBar:         false
+URxvt*url-launcher:      /usr/bin/chromium
+URxvt*shading:           180
+URxvt*transparent:       true
+URxvt*perl-ext-common:   default,matcher,searchable-scrollback,selection-to-clipboard,confirm-paste
+URxvt.print-pipe: "cat > /dev/null"
+
+URxvt*foreground:        #202020
+URxvt*background:        #e4e4e4

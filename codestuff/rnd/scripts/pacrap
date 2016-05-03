@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+UNDEPS=$(pacman -Qdtq)
+if [ -n $UNDEPS ]; then
+    echo "Unneeded deps (pacman -Qdtq):"
+    echo "$UNDEPS" | sed 's/^/\t/g'
+fi
+UNSRCS=$(pacman -Qm)
+if [ -n $UNSRCS ]; then
+    echo -e "\nNo source avail (pacman -Qm):"
+    echo "$UNSRCS" | sed 's/^/\t/g'
+fi

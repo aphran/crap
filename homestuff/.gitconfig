@@ -1,0 +1,32 @@
+[user]
+    name = Alex Franco 
+    email = alejandro.franco@linux.intel.com
+    signingkey = F47DBB0318DA54CB
+    #signingkey = 6C942D39
+
+[sendemail]
+    from = Alex Franco <alejandro.franco@linux.intel.com>
+    smtpserver = fm-out.intel.com
+    smtpserverport = 25
+    confirm = auto
+
+[core]
+    gitproxy = /opt/bin/git-proxy
+[socks]
+    proxy = proxy.fm.intel.com:1080
+[http]
+    proxy = http://proxy.fm.intel.com:911
+[https]
+    proxy = https://proxy.fm.intel.com:912
+
+[push]
+    default = simple
+
+[alias]
+    co = checkout
+    st = status
+    sh = show
+    ci = commit
+    br = branch
+    pu = push
+    ls = ls-tree -r HEAD

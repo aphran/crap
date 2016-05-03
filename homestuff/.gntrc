@@ -1,0 +1,13 @@
+[general]
+mouse = 1
+remember_position = 1
+
+[colorpairs]
+normal     = black; white
+highlight  = white; black
+highlightd = white; black
+title      = green; white
+titled     = blue;  white
+text       = white; black
+disabled   = white; black
+urgent     = red;   white

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+layouts=( us latam de se ) # de se
+get_layout_index() {
+    local i=0;
+    for str in "${layouts[@]}"; do
+        if [ "$str" = "$1" ]; then
+            echo $i
+            return
+        else
+            (( i++ ))
+        fi
+    done
+    echo "-1"
+}
+max_i=${#layouts[@]}; (( max_i-- ))
+layout=$( ${HOME}/scripts/getkeymap )
+layout_i=$( get_layout_index ${layout} )
+
+echo "Got layout: [${layout_i}] ${layouts[${layout_i}]}"
+if [ ${layout_i} == "-1" ]; then
+    echo "layout not found"
+    exit 1
+fi
+
+if [ ${layout_i} -ge ${max_i} ]; then
+    layout_i=0
+else
+    (( layout_i++ ))
+fi
+echo "switching to: ${layouts[${layout_i}]}" >&2
+setxkbmap ${layouts[${layout_i}]}

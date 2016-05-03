@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+dif=${1}
+height=$( xrandr | grep '\*+' -m 1 | awk -F "x" '{ print $1 }' )
+if [ -n ${dif} ]; then
+    (( height = height - dif ))
+fi
+echo ${height}

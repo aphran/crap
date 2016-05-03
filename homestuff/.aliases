@@ -1,0 +1,32 @@
+alias load-intel-proxies='. /opt/vars/intel-proxies && \
+  export GIT_PROXY_COMMAND=/opt/bin/git-proxy'
+alias WW='printf "WW%02d\n" $(expr $(date +%U) + 1)'
+alias grep='egrep'
+alias igrep='egrep -i --color=always '
+alias cgrep='egrep --color=always '
+alias chromium='chromium --proxy-pac-url=http://wpad.intel.com/wpad.dat 2>/dev/null 1>&2'
+alias df='df -hT'
+alias du='du -h'
+alias ls='\ls -X --group-directories-first --color=always'
+alias ll='ls -lh'
+alias l='ll'
+alias l1='ls -1'
+alias lr='function _yls(){ ls -gothr "$@"|sed "s#^[a-zA-Z-]\{1,\} \{1,\}[0-9]\{1,\} ##"; };_yls'
+alias lR='lr -R'
+alias lS='ll -S'
+alias lls="l | awk '{ printf \"%-6s\",\$5; print \$9 }'"
+alias pacgrep="pacman -Ss | egrep '^\w+/' | grep"
+alias v='vim'
+alias vi='vim'
+alias virtualenv=virtualenv2
+alias nwire='sudo netset e 1>/dev/null 2>&1 & load-intel-proxies'
+alias nwifi='sudo netset w 1>/dev/null 2>&1 & load-intel-proxies'
+alias swd='pwd > $HOME/.config/last_stored_pwd'
+alias lwd='[ -r $HOME/.config/last_stored_pwd ] && cd $(cat $HOME/.config/last_stored_pwd)'
+alias mplayer='mplayer -ao pulse'
+#alias qchrm='function _qchrm(){};_qchrm'
+alias stmx='tmux -2 new -A -s _'
+# this cleans a repo where patchtest has run, it checks out master, removes git-pw files and patchtest branches
+alias pwgcl='git co master; rm .git-pw*; git br | grep patchtest | xargs -I {} git br -D {}'
+alias intelvpn='sudo openconnect -c ~/.cert/certificate.p12 --key-password-from-fsid --cafile ~/.cert/intel-certchain.crt vpn.intel.com'
+alias ssh-with-unknown-hosts 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'

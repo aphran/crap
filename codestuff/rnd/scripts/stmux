@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+tmux -2 new -A -s ${1:-general}

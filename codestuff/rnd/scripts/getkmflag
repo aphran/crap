@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+flagdir=${HOME}/scripts/kmflags
+flagext="jpg"
+km=$(setxkbmap -query | grep layout | sed 's/layout:[ ]*//g')
+echo "${flagdir}/${km}.${flagext}"

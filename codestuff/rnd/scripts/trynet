@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+tout=4
+tryn=3
+maxt=$(( tout * tryn ))
+c="/usr/bin/curl --connect-timeout $tout --max-time $tout --retry $tryn --retry-max-time $maxt"
+url="http://www.google.com"
+ok="200"
+mk="302"
+res=$(${c} -I -s ${url} | head -n 1)
+
+if [ "${res}" != "${res/${ok}/}" ] || [ "${res}" != "${res/${mk}/}" ]; then
+    echo "We are online!"
+    exit 0
+else
+    echo "We are offline! :(" >&2
+    exit 1
+fi

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script formats the output of git lig --pretty so it's squarish
+TS=''
+TE=''
+FILTER=''
+if [ -n "$1" ]; then
+    TS='<<<<'
+    TE='>>>>'
+    LIMIT=115
+    LIMITER="| sed -r 's/(^.{$LIMIT})(.*)/\1(...)/'"
+    AUTHCLEAN="| sed -r -e 's/$TS(.{10})(.*)$TE/\1/' -e 's/$TS//g' -e 's/$TE//g'"
+    FILTER="| head -n $1 $LIMITER $AUTHCLEAN"
+fi
+CMD="git log --pretty=format:\"%C(yellow)%h%Creset %ad%C(green) $TS%aN$TE%Creset %s\" --date=short"
+
+eval "$CMD" "$FILTER"

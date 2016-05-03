@@ -1,0 +1,25 @@
+[1]
+
+Machine learning classifications:
+  - Supervised learning
+    We give the machine a dataset with "right answers". Its job is producing more of these right answers based on clever ways to analize data sets, using certain criteria
+    - Regression problem: treat the result as a continuous value range (each data point maps to a value in the continuous range)
+    - Classification problem: treat the result as a discrete value set (map data points to categories)
+
+  - Unsupervised learning
+    We give the machine data sets, without any answers or labels, and expect the machine to find a pattern or structure in the data.
+    - Clustering problem: find lumps of data that seems to share a pattern or feature
+    - Cocktail Party problem: use different sources of parallel data and differentiate it
+    - Associative: associate characteristics in common with outcomes or end states
+
+Process
+
+Training set -> Learning Algo -> hypothesis function h() -> map X to Y in training set
+
+One type of the hypothesis function is Linear Regression with one Variable : Univariate Linear Regression
+
+A standard linear function:
+
+ hø(x) = ø0 + ø1x
+
+
